@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de QR Code</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+
+  <!-- HERO BANNER com imagem anime -->
+  <div class="hero">
+    <img class="hero-img" src="img/maomaobanner.jpg">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>Gerador de<br><em>QR Code</em></h1>
+      <p>Insira um texto ou link e gere seu QR Code.</p>
+    </div>
+  </div>
+
+  <!-- CARDS SOBREPOSTOS -->
+  <div class="page-body">
+
+    <div class="card card--form">
+      <form id="qr-form">
+        <div class="field">
+          <label for="qr-input">Conteúdo</label>
+          <div class="input-wrap">
+            <span class="input-icon">⌕</span>
+            <input type="text" id="qr-input" name="qrinput" placeholder="https://seusite.com ou qualquer texto" autocomplete="off">
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Tamanho</label>
+          <div class="size-row">
+            <button type="button" class="size-btn" data-size="128">Pequeno</button>
+            <button type="button" class="size-btn active" data-size="200">Médio</button>
+            <button type="button" class="size-btn" data-size="300">Grande</button>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Cor do QR Code</label>
+          <div class="color-row">
+            <div class="color-dot active" data-color="#1C1C1C" style="background:#1C1C1C;" title="Preto"></div>
+            <div class="color-dot" data-color="#426E55" style="background:#426E55;" title="Verde"></div>
+            <div class="color-dot" data-color="#2D4839" style="background:#2D4839;" title="Verde escuro"></div>
+            <div class="color-dot" data-color="#CB748E" style="background:#CB748E;" title="Rosa"></div>
+            <div class="color-dot" data-color="#73986F" style="background:#73986F;" title="Verde suave"></div>
+          </div>
+        </div>
+
+        <button type="submit" class="btn-primary">Gerar QR Code →</button>
+      </form>
+    </div>
+
+    <div class="card card--result">
+      <div class="result-header">
+        <h2>Resultado</h2>
+      </div>
+      <div id="qr-placeholder" class="result-placeholder">
+        <div class="placeholder-icon">▦</div>
+        <p>Seu QR Code aparecerá aqui</p>
+      </div>
+      <div id="qr-result" style="display:none;"></div>
+      <a id="btn-download" class="btn-download" download="qrcode.png">↓ Baixar QR Code</a>
+    </div>
+
+  </div>
+  <!-- FOOTER BANNER com imagem anime -->
+  <div class="footer-banner">
+    <div class="footer-overlay"></div>
+    <div class="footer-content">
+      <p>© 2026 · Gerador de QR Code</p>
+    </div>
+  </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body>
+</html>
