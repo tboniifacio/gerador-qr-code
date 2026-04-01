@@ -28,7 +28,7 @@ sizeRow.addEventListener("click", (e) => {
 
 sizeRow.addEventListener("click", (e) => {
     e.preventDefault()
-
+ 
     const button = e.target.closest(".size-btn")
 
     if (!button) return
