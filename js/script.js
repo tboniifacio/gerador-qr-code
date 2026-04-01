@@ -80,7 +80,8 @@ btn.addEventListener("click", (e) => {
             colorLight: "#ffffff"
         })
 
-        const canvas = result.querySelector("canvas")
+       setTimeout(() => {
+         const canvas = result.querySelector("canvas")
 
         if (canvas) {
             const url = canvas.toDataURL("image/png")
@@ -88,6 +89,7 @@ btn.addEventListener("click", (e) => {
         }
 
         downloadBtn.style.display = "inline-block"
+       }, 100)
 
         p.innerHTML = ""
     }
