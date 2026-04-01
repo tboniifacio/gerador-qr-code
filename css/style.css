@@ -159,13 +159,23 @@
     /* ======== FORM ======== */
     .field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
 
-    label {
+    span label {
       font-size: 0.6875rem;
       font-weight: 500;
       letter-spacing: 0.07em;
       text-transform: uppercase;
       color: var(--color-text-muted);
     }
+
+        span p {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--color-error);
+    }
+
+
 
     .input-wrap { position: relative; display: flex; align-items: center; }
 
