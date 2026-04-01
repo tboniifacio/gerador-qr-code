@@ -6,6 +6,7 @@ const result = document.querySelector("#qr-placeholder")
 const colorRow = document.querySelector(".color-row")
 const colorDot = document.querySelectorAll(".color-dot")
 const p = document.querySelector(".invalidUrl")
+const downloadBtn = document.querySelector("#btn-download")
 
 
 sizeRow.addEventListener("click", (e) => {
@@ -28,7 +29,7 @@ sizeRow.addEventListener("click", (e) => {
 
 sizeRow.addEventListener("click", (e) => {
     e.preventDefault()
- 
+
     const button = e.target.closest(".size-btn")
 
     if (!button) return
@@ -78,6 +79,16 @@ btn.addEventListener("click", (e) => {
             colorDark: colorActive.dataset.color,
             colorLight: "#ffffff"
         })
+
+        const canvas = result.querySelector("canvas")
+
+        if (canvas) {
+            const url = canvas.toDataURL("image/png")
+            downloadBtn.href = url
+        }
+
+        downloadBtn.style.display = "inline-block"
+
         p.innerHTML = ""
     }
     else {
@@ -88,7 +99,5 @@ btn.addEventListener("click", (e) => {
     }
 
 })
-
-
 
 
